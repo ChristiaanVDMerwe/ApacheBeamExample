@@ -77,11 +77,11 @@ def run(argv=None, save_main_session=True):
     processed_users | 'avro_write' >> beam.io.avroio.WriteToAvro(
         'output_avro', schema, file_name_suffix='.avro')
 
-    # reader = DataFileReader(
-    #     open("output_avro-00000-of-00001.avro", "rb"), DatumReader())
-    # for user in reader:
-    #     print user
-    # reader.close()
+    reader = DataFileReader(
+        open("output_avro-00000-of-00001.avro", "rb"), DatumReader())
+    for user in reader:
+        print user
+    reader.close()
 
     result = p.run()
     result.wait_until_finish()

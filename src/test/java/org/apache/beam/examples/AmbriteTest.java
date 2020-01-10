@@ -19,9 +19,6 @@ package org.apache.beam.examples;
 
 import java.util.Arrays;
 import java.util.List;
-import org.apache.beam.examples.Ambrite.ExtractNumsLowerFn;
-import org.apache.beam.examples.Ambrite.ProcessNames;
-import org.apache.beam.examples.Ambrite.User;
 import org.apache.beam.sdk.coders.StringUtf8Coder;
 import org.apache.beam.sdk.testing.PAssert;
 import org.apache.beam.sdk.testing.TestPipeline;
