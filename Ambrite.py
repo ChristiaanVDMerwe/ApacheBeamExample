@@ -10,6 +10,7 @@ import re
 from past.builtins import unicode
 
 import apache_beam as beam
+from apache_beam.io import avroio
 from apache_beam.io import ReadFromText
 from apache_beam.io import WriteToText
 from apache_beam.metrics import Metrics
@@ -66,40 +67,21 @@ def run(argv=None, save_main_session=True):
     # Read the text file[pattern] into a PCollection.
     lines = p | 'read' >> ReadFromText(known_args.input)
 
-    # Write to .avro file
-
-    class write_to_avro(beam.DoFn):
-        def process(self, element):
-            user = element.split(',')
-            schema = avro.schema.parse(open("user.avsc", "rb").read())
-            writer = DataFileWriter(
-                open("users.avro", "wb"), DatumWriter(), schema)
-            writer.append(
-                {"name": str(user[0]), "password": str(user[1])})
-            writer.close()
-
-            # Display .avro file
-            reader = DataFileReader(open("users.avro", "rb"), DatumReader())
-            for user in reader:
-                print user
-            reader.close()
-
     processed_users = (lines | 'splits' >> beam.Map(split_and_lower)
-                             | 'noNum' >> beam.Map(no_num_format)
-                             | 'formatOut' >> beam.Map(format_output))
-
+                       | 'noNum' >> beam.Map(no_num_format)
+                       | 'formatOut' >> beam.Map(format_output))
     processed_users | 'uniqueUser' >> beam.Distinct() | 'writeUnique' >> WriteToText(
         known_args.output, file_name_suffix='.csv')
 
-    #--------------------------------AVRO_EXPERIMENT BEGIN --------------------------------#
+    schema = avro.schema.parse(open("user.avsc", "rb").read())
+    processed_users | 'avro_write' >> beam.io.avroio.WriteToAvro(
+        'output_avro', schema, file_name_suffix='.avro')
 
-    # avro_users = (processed_users | 'write_avro' >>
-    #               beam.ParDo(write_to_avro()))
-    avro_users = (processed_users | 'write_avro' >>
-                  beam.ParDo(write_to_avro()))
-
-    #--------------------------------AVRO_EXPERIMENT END --------------------------------#
-    # avro_two = (processed_users | 'avro_out' >> beam.ParDo(write_to_avro()))
+    # reader = DataFileReader(
+    #     open("output_avro-00000-of-00001.avro", "rb"), DatumReader())
+    # for user in reader:
+    #     print user
+    # reader.close()
 
     result = p.run()
     result.wait_until_finish()

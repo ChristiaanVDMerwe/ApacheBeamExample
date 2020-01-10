@@ -1,14 +1,10 @@
 {
 	"namespace": "example.avro",
-	"type": "record",
+	"type": "string",
 	"name": "User",
 	"fields": [
 		{
-			"name": "name",
-			"type": "string"
-		},
-		{
-			"name": "password",
+			"name": "user",
 			"type": "string"
 		}
 	]
