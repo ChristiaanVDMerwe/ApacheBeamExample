@@ -8,22 +8,22 @@ Various batch and streaming apache beam pipeline implementations and examples. T
 4. An IDE is useful, VS Code is the one I use.
 
 
-#Ambrite.py
+# Ambrite.py
 Ambrite.py reads in a .csv file consisting of a user ID, username and password.  All digits, capitals and duplicates are removed and then written to a new .csv file as well as an .avro file. The schema for the .avro file is defined by 'user.avsc'.
 
 Run: $ python Ambrite.py --input input10.csv --output output
 
-#AmbriteTest.py
+# AmbriteTest.py
 AmbriteTest.py run several unit tests for each function in Ambrite.py.
 
 Run: $ python AmbriteTest.py
 
-#Ambrite.java
+# Ambrite.java
 Ambrite.java reads in a .csv file consisting of a user ID, username and password.  All digits, capitals and duplicates are removed and then written to a new .csv file as well as an .avro file. The schema for the .avro file is defined by 'user.avsc'.
 
 Run: $mvn compile exec:java -Dexec.mainClass=org.apache.beam.examples.Ambrite -Dexec.args="--inputFile=pom.xml --output=counts" -Pdirect-runner
 
-#AmbriteTest.java
+# AmbriteTest.java
 AmbriteTest.py run several unit tests for each function in Ambrite.java.
 
 Run: $ mvn test
