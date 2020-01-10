@@ -20,7 +20,7 @@ Dependencies can be found in 'dependencies.txt'
 8.	virtualenv==16.7.9
 
 # Ambrite.py
-Ambrite.py reads in a .csv file consisting of a user ID, username and password.  All digits, capitals and duplicates are removed and then written to a new .csv file as well as an .avro file. The schema for the .avro file is defined by 'user.avsc'.
+Ambrite.py reads in a .csv file consisting of a user ID, username and password.  All digits, capitals and duplicates are removed and then written to a new .csv file as well as an .avro file. The schema for the .avro file is defined by 'user.avsc'. [Avro](https://beam.apache.org/releases/pydoc/2.5.0/apache_beam.io.avroio.html)
 
 Run: $ python Ambrite.py --input input10.csv --output output
 
