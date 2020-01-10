@@ -1,5 +1,5 @@
 # apache-beam-pipelines
-Various batch and streaming apache beam pipeline implementations and examples. This README serves as a skeleton for getting the implementations to work on your own machine. All the implementations are coded in JAVA and Python.
+Apache beam pipeline implementations and examples. This README serves as a skeleton for getting the implementations to work on your own machine. All the implementations are coded in JAVA and Python.
 
 ## Preliminaries
 1. You need a java JDK: I used version 8. This is a useful [tutorial](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html)
