@@ -7,7 +7,7 @@ Various batch and streaming apache beam pipeline implementations and examples. T
 3. It's probably useful to have done the MinimalWordCount example through Apache's tutorial on their [website](https://beam.apache.org/get-started/wordcount-example/#minimalwordcount-example) and to look through some of the Apache Documentation to get an idea of the programming model.
 4. VS Code is a useful IDE that I used.
 
-##Dependencies
+## Dependencies
 Dependencies can be found in 'dependencies.txt'
  
 1.	apache-beam==2.16.0
