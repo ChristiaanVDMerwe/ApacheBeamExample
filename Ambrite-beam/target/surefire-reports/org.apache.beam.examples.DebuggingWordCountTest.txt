@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.beam.examples.DebuggingWordCountTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.689 s <<< FAILURE! - in org.apache.beam.examples.DebuggingWordCountTest
+testDebuggingWordCount(org.apache.beam.examples.DebuggingWordCountTest)  Time elapsed: 8.689 s  <<< ERROR!
+org.apache.beam.sdk.Pipeline$PipelineExecutionException: 
+java.lang.AssertionError: ParDo(FilterText)/ParMultiDo(FilterText).output: 
+Expected: iterable with items [<KV{it, 53}>, <KV{PGM, 74}>] in any order
+     but: no item matches: <KV{it, 53}>, <KV{PGM, 74}> in []
+	at org.apache.beam.examples.DebuggingWordCountTest.testDebuggingWordCount(DebuggingWordCountTest.java:54)
+Caused by: java.lang.AssertionError: 
+ParDo(FilterText)/ParMultiDo(FilterText).output: 
+Expected: iterable with items [<KV{it, 53}>, <KV{PGM, 74}>] in any order
+     but: no item matches: <KV{it, 53}>, <KV{PGM, 74}> in []
+	at org.apache.beam.examples.DebuggingWordCountTest.testDebuggingWordCount(DebuggingWordCountTest.java:54)
+Caused by: java.lang.AssertionError: 
+
+Expected: iterable with items [<KV{it, 53}>, <KV{PGM, 74}>] in any order
+     but: no item matches: <KV{it, 53}>, <KV{PGM, 74}> in []
+

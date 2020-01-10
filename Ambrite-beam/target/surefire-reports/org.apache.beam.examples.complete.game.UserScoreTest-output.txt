@@ -1,0 +1,18 @@
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on user6_AliceBlueDingo,AliceBlueDingo,4,xxxxxxx,2015-11-19 09:53:53.444, For input string: "xxxxxxx"
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on THIS IS A PARSE ERROR,2015-11-19 09:53:53.444, 2
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on user13_BisqueBilby,BisqueBilby,xxx,1447955630000,2015-11-19 09:53:53.444, For input string: "xxx"
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on user6_AliceBlueDingo,AliceBlueDingo,4,xxxxxxx,2015-11-19 09:53:53.444, For input string: "xxxxxxx"
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on THIS IS A PARSE ERROR,2015-11-19 09:53:53.444, 2
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on THIS IS A PARSE ERROR,2015-11-19 09:53:53.444, 2
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on user6_AliceBlueDingo,AliceBlueDingo,4,xxxxxxx,2015-11-19 09:53:53.444, For input string: "xxxxxxx"
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on user6_AliceBlueDingo,AliceBlueDingo,4,xxxxxxx,2015-11-19 09:53:53.444, For input string: "xxxxxxx"
+Jan 10, 2020 10:16:46 AM org.apache.beam.examples.complete.game.UserScore$ParseEventFn processElement
+INFO: Parse error on THIS IS A PARSE ERROR,2015-11-19 09:53:53.444, 2
