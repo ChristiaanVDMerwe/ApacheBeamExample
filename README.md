@@ -39,7 +39,7 @@ AmbriteTest.py run several unit tests for each function in Ambrite.java.
 
 Run: $ mvn test
 
-#Useful Links
+# Useful Links
 1. [Beam Guide](https://beam.apache.org/documentation/programming-guide/#additional-outputs)
 2. [Getting started with AVRO](https://avro.apache.org/docs/current/gettingstartedpython.html)
 3. [AVRO write](https://beam.apache.org/releases/pydoc/2.5.0/apache_beam.io.avroio.html)
