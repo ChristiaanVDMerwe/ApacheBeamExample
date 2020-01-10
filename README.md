@@ -3,9 +3,10 @@ Apache beam pipeline implementations and examples. This README serves as a skele
 
 ## Preliminaries
 1. You need a java JDK: I used version 8. This is a useful [tutorial](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html)
-2. Install Apache Maven (I used version 3.6.1)
-3. It's probably useful to have done the MinimalWordCount example through Apache's tutorial on their [website](https://beam.apache.org/get-started/wordcount-example/#minimalwordcount-example) and to look through some of the Apache Documentation to get an idea of the programming model.
-4. VS Code is a useful IDE that I used.
+2. Python 2.7.15 is required to run the python files.
+3. Install Apache Maven (I used version 3.6.1)
+4. It's probably useful to have done the MinimalWordCount example through Apache's tutorial on their [website](https://beam.apache.org/get-started/wordcount-example/#minimalwordcount-example) and to look through some of the Apache Documentation to get an idea of the programming model.
+5. VS Code is a useful IDE that I used.
 
 ## Dependencies
 Dependencies can be found in 'dependencies.txt'
