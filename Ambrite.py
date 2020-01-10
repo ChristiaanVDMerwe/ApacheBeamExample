@@ -89,7 +89,7 @@ def run(argv=None, save_main_session=True):
                              | 'formatOut' >> beam.Map(format_output))
 
     processed_users | 'uniqueUser' >> beam.Distinct() | 'writeUnique' >> WriteToText(
-        'python_output', file_name_suffix='.csv')
+        known_args.output, file_name_suffix='.csv')
 
     #--------------------------------AVRO_EXPERIMENT BEGIN --------------------------------#
 
